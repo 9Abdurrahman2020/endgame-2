@@ -1,0 +1,18 @@
+.banner-container {
+  background-size: cover;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-image: url("https://i.ibb.co/NtGpk9Z/woman-working-as-doctor.jpg");
+}
+.banner-container .big-text {
+  font-size: 55px;
+}
+.banner-container .below-big-text {
+  font-size: 30px;
+  font-weight: 300;
+}
+.info {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
