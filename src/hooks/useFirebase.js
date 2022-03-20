@@ -23,9 +23,14 @@ const useFirebase = () => {
   const googleProvider = new GoogleAuthProvider();
 
   useEffect(() => {
-    fetch("./data/services.json")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
+  }, []);
+  useEffect(() => {
+    fetch("http://localhost:5000/doctors")
+      .then((res) => res.json())
+      .then((data) => setDoctors(data));
   }, []);
 
   const registerUser = () => {

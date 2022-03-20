@@ -1,8 +1,11 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
+import useAuth from "../../../context/useAuth";
+import Card from "../../Shared/Header/Card/Card";
 import "./ourDoctor.css";
 
 const OurDoctors = () => {
+  const { doctors } = useAuth();
   return (
     <Container>
       <div className="our-doctor-section mb-5 py-4">
@@ -18,10 +21,9 @@ const OurDoctors = () => {
           />
         </div>
         <Row>
-          <div className="col-md-3">Doctor</div>
-          <div className="col-md-3">Doctor</div>
-          <div className="col-md-3">Doctor</div>
-          <div className="col-md-3">Doctor</div>
+          {doctors.slice(0, 4).map((d) => (
+            <Card key={d._id} data={d} />
+          ))}
         </Row>
       </div>
     </Container>
