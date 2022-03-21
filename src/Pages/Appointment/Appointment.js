@@ -18,7 +18,6 @@ const Appointment = () => {
     const data = { ...formData };
 
     data.status = "pending";
-    data.name = user.displayName;
     data.email = user.email;
     console.log(data);
     fetch("http://localhost:5000/appointment", {

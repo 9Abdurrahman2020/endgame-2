@@ -25,8 +25,8 @@ function Dashboard() {
                   </Link>
                 </Nav.Link>
                 <Nav.Link eventKey="second">
-                  <Link to={`/dashboard`} className="dashboard-menu">
-                    <span className="logo-style">{}</span>Reviews
+                  <Link to={`/dashboard/coupon`} className="dashboard-menu">
+                    <span className="logo-style">{}</span>Set Coupon
                   </Link>
                 </Nav.Link>
               </Nav.Item>

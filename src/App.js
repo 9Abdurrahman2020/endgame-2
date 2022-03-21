@@ -5,6 +5,7 @@ import Appointment from "./Pages/Appointment/Appointment";
 import AllAppointment from "./Pages/Dashboard/AllAppointment/AllAppointment";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import DashboardRoute from "./Pages/Dashboard/DashboardRoute";
+import SetCoupon from "./Pages/Dashboard/SetCoupon/SetCoupon";
 import DepartmentDetail from "./Pages/DepartmentDetail/DepartmentDetail";
 import DoctorDetail from "./Pages/DoctorDetail/DoctorDetail";
 import Home from "./Pages/Home/Home";
@@ -69,6 +70,7 @@ function App() {
             }
           >
             <Route path="/dashboard" element={<AllAppointment />} />
+            <Route path="/dashboard/coupon" element={<SetCoupon />} />
           </Route>
         </Routes>
         <Footer />
