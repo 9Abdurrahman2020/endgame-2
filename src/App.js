@@ -2,10 +2,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Context from "./context/Context";
 import Appointment from "./Pages/Appointment/Appointment";
+import AllAppointment from "./Pages/Dashboard/AllAppointment/AllAppointment";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import DashboardRoute from "./Pages/Dashboard/DashboardRoute";
 import DepartmentDetail from "./Pages/DepartmentDetail/DepartmentDetail";
 import DoctorDetail from "./Pages/DoctorDetail/DoctorDetail";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
+import MyAppointment from "./Pages/MyAppointment/MyAppointment";
+import Payment from "./Pages/Payment/Payment";
+import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Register from "./Pages/Register/Register";
 import ServiceDetail from "./Pages/ServiceDetail/ServiceDetail";
 import Footer from "./Pages/Shared/Footer/Footer";
@@ -20,10 +26,50 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/doctor/:id" element={<DoctorDetail />} />
-          <Route path="/service/:id" element={<ServiceDetail />} />
-          <Route path="/department/:id" element={<DepartmentDetail />} />
-          <Route path="/appointment" element={<Appointment />} />
+          <Route path="/my-appointment" element={<MyAppointment />} />
+          <Route path="/payment/:id" element={<Payment />} />
+          <Route
+            path="/doctor/:id"
+            element={
+              <PrivateRoute>
+                <DoctorDetail />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/service/:id"
+            element={
+              <PrivateRoute>
+                <ServiceDetail />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/department/:id"
+            element={
+              <PrivateRoute>
+                <DepartmentDetail />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/appointment"
+            element={
+              <PrivateRoute>
+                <Appointment />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <DashboardRoute>
+                <Dashboard />
+              </DashboardRoute>
+            }
+          >
+            <Route path="/dashboard" element={<AllAppointment />} />
+          </Route>
         </Routes>
         <Footer />
       </BrowserRouter>

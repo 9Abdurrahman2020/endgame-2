@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useAuth from "../../../context/useAuth";
 import "./header.css";
 const Header = () => {
-  const { user, logOut } = useAuth();
+  const { user, logOut, userRole } = useAuth();
   return (
     <div>
       <Navbar bg="light" variant="light" expand="lg">
@@ -19,7 +19,9 @@ const Header = () => {
         <Navbar.Collapse id="navbarScroll">
           <Nav className="ms-auto my-2 my-lg-0 nav-link text-center">
             <Link to="/">Home</Link>
+            {user?.email && <Link to="/my-appointment">My-Appointment</Link>}
             <Link to="/appointment">Book-Appointment</Link>
+            {userRole === "admin" && <Link to="/dashboard">Dashboard</Link>}
             {user && (
               <a>
                 <i class="fas fa-user"></i>

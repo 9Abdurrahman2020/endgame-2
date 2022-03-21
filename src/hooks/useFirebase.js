@@ -12,6 +12,7 @@ import { InitializeFirebase } from "../firebase/firebase.init";
 InitializeFirebase();
 const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [adminVerify, setAdminVerify] = useState(true);
   const [doctors, setDoctors] = useState([]);
   const [services, setServices] = useState(null);
   const [department, setDepartment] = useState(null);
@@ -19,7 +20,7 @@ const useFirebase = () => {
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const [userRole, setUserRole] = useState("user");
+  const [userRole, setUserRole] = useState(null);
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
@@ -119,6 +120,7 @@ const useFirebase = () => {
   const logOut = () => {
     signOut(auth).then(() => {
       setUser(null);
+      setUserRole(null);
     });
   };
 
@@ -127,6 +129,11 @@ const useFirebase = () => {
       .then((res) => res.json())
       .then((data) => {
         setUserRole(data.role);
+        if (data.role === "admin") {
+          setAdminVerify(false);
+        } else {
+          setAdminVerify(false);
+        }
       });
   }, [user]);
   console.log(userRole);
@@ -144,6 +151,8 @@ const useFirebase = () => {
     isLoading,
     loginUsingEmailPass,
     department,
+    userRole,
+    adminVerify,
   };
 };
 export default useFirebase;

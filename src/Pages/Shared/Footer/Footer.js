@@ -12,9 +12,9 @@ const Footer = () => {
       </div>
       <div className="footer-links">
         <Link to="/">Home</Link>
-        <Link to="/all-doctors">Doctors</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/about">About Us</Link>
+        <Link to="/">Doctors</Link>
+        <Link to="/">Contact</Link>
+        <Link to="/">About Us</Link>
       </div>
       <p>Copyrights &copy;2021 All rights are reserved by Abdur Rahman</p>
     </div>
