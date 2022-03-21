@@ -14,6 +14,7 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [doctors, setDoctors] = useState([]);
   const [services, setServices] = useState(null);
+  const [department, setDepartment] = useState(null);
   const [user, setUser] = useState(null);
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
@@ -31,6 +32,11 @@ const useFirebase = () => {
     fetch("http://localhost:5000/doctors")
       .then((res) => res.json())
       .then((data) => setDoctors(data));
+  }, []);
+  useEffect(() => {
+    fetch("http://localhost:5000/department")
+      .then((res) => res.json())
+      .then((data) => setDepartment(data));
   }, []);
 
   const registerUser = () => {
@@ -113,6 +119,7 @@ const useFirebase = () => {
     registerUser,
     isLoading,
     loginUsingEmailPass,
+    department,
   };
 };
 export default useFirebase;

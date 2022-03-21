@@ -1,0 +1,90 @@
+[
+    {
+        "id":1,
+        "fee":700,
+        "name":"Dr. Shoaib Ahmad",
+        "gender":"male",
+        "category":"Cardiology",
+        "experience":7,
+        "deg":"MBBS, MPH, CCD(BIRDEM), CCCD(NHF)",
+        "img":"https://praavahealth.com/wp-content/uploads/2020/12/shoab-150x150.jpg",
+        "des":"Hello there I'm Dr. MD Shoaib Ahmad. I'm a Cardiology specialist, I have 7 years plus experience in treatment Cardiology. Feel free to Appoint me. Wishing you a happy life !"
+    },
+    {
+        "id":2,
+        "fee":900,
+        "name":"Dr. Lt. Kabir Ahmed",
+        "gender":"male",
+        "category":"Neurology",
+        "experience":11,
+        "deg":"MBBS, CCD, FCGP, MCPS",
+        "img":"https://praavahealth.com/wp-content/uploads/2020/12/drkabir-150x150.jpg",
+        "des":"Hello there I'm Dr. Lt. Kabir Ahmed. I'm a Neurology specialist, I have 11 years plus experience in handling Neurology patient. Feel free to Appoint me. Wishing you a happy life !"
+    },
+    {
+        "id":3,
+        "fee":1200,
+        "name":"Dr. Paramita Karim",
+        "gender":"female",
+        "category":"Dental",
+        "experience":9,
+        "deg":"MBChB (Dundee medical school), MRCP (UK)",
+        "img":"https://praavahealth.com/wp-content/uploads/2020/12/5e77315226686-150x150.jpg",
+        "des":"Hello there I'm Dr. Paramita Karim. I'm a Dental surgen and specialist, I have 9 years plus experience in handling Dental patient. Feel free to Appoint me. Wishing you a happy life !"
+    },
+    {
+        "id":4,
+        "fee":500,
+        "name":"Dr. Mosrose Selina",
+        "gender":"female",
+        "category":"Skin",
+        "experience":5,
+        "deg":"MBBS, DMU (BITMIR), DOC (Skin & Venereal)",
+        "img":"https://praavahealth.com/wp-content/uploads/2020/12/drsalina-150x150.jpg",
+        "des":"Hello there I'm Dr. Mosrose Selina. I'm a Skin specialist, I have 5 years plus experience in handling Skin patient. Feel free to Appoint me. Wishing you a happy life !"
+    },
+    {
+        "id":5,
+        "fee":800,
+        "name":"Dr. Taslima Akter",
+        "gender":"female",
+        "category":"Asthma",
+        "experience":12,
+        "deg":"MBBS, CCS (BIRDEM), Dip. in Asthma(icddr,b)",
+        "img":"https://praavahealth.com/wp-content/uploads/2020/12/taslima-150x150.jpg",
+        "des":"Hello there I'm Dr. Taslima Akter. I'm an Asthma specialist, I have 12 years plus experience in handling Asthma patient. Feel free to Appoint me. Wishing you a happy life !"
+    },
+    {
+        "id":6,
+        "fee":600,
+        "name":"Dr. Ashutosh Saha",
+        "gender":"male",
+        "category":"Medicine",
+        "experience":6,
+        "deg":"MBBS (Rajshahi University)",
+        "img":"https://praavahealth.com/wp-content/uploads/2020/12/Ashutosh-Saha-150x150.jpg",
+        "des":"Hello there I'm Dr. Ashutosh saha. I'm a Medicine specialist, I have 6 years plus experience in handling almost all types of patient. Feel free to Appoint me. Wishing you a happy life !"
+    },
+    {
+        "id":7,
+        "fee":1000,
+        "name":"Dr. Mariha Alam",
+        "gender":"female",
+        "category":"Medicine",
+        "experience":7,
+        "deg":"MBBS, FCPS (Obsygn), FiAOG (India)",
+        "img":"https://praavahealth.com/wp-content/uploads/2020/12/mariha-150x150.jpg",
+        "des":"Hello there I'm Dr. Mariha Alam. I'm a Medicine specialist, I have 7 years plus experience in handling almost all types of patient. Feel free to Appoint me. Wishing you a happy life !"
+    },
+    {
+        "id":8,
+        "fee":1500,
+        "name":"Dr. Parveen Akter",
+        "gender":"female",
+        "category":"Child-Care",
+        "experience":32,
+        "deg":"MBBS (DMC), Diploma in Child Health (BICH)",
+        "img":"https://praavahealth.com/wp-content/uploads/2020/12/Parveen-akhter-_GS-150x150.jpg",
+        "des":"Hello there I'm Dr. Parveen Akter. I'm a Child specialist, I have 32 years plus experience in handling Child patient. Feel free to Appoint me. Wishing you a happy life !"
+    }
+]

@@ -19,7 +19,7 @@ const Header = () => {
         <Navbar.Collapse id="navbarScroll">
           <Nav className="ms-auto my-2 my-lg-0 nav-link text-center">
             <Link to="/">Home</Link>
-            <Link to="/all-doctors">Doctors</Link>
+            <Link to="/appointment">Book-Appointment</Link>
             {user && (
               <a>
                 <i class="fas fa-user"></i>

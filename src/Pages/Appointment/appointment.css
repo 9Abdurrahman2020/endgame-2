@@ -1,0 +1,10 @@
+.appointment-container {
+  background-color: rgb(0, 119, 255);
+  color: white;
+}
+.appointment-horizental-line {
+  opacity: 1;
+  color: rgb(226, 14, 14);
+  width: 150px;
+  height: 2px;
+}
