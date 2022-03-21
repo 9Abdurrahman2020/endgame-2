@@ -19,6 +19,7 @@ const useFirebase = () => {
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const [userRole, setUserRole] = useState("user");
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
@@ -51,6 +52,13 @@ const useFirebase = () => {
       createUserWithEmailAndPassword(auth, email, pass)
         .then(() => {
           setError("Successfully registered, You can login now !");
+          fetch("http://localhost:5000/users", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify({ email, role: "user" }),
+          });
           signOut(auth);
         })
         .catch((error) => {
@@ -82,6 +90,13 @@ const useFirebase = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         setUser(result.user);
+        fetch("http://localhost:5000/users", {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ email: result.user.email, role: "user" }),
+        });
       })
       .catch((error) => {
         setError(error.message);
@@ -106,6 +121,15 @@ const useFirebase = () => {
       setUser(null);
     });
   };
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/user/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setUserRole(data.role);
+      });
+  }, [user]);
+  console.log(userRole);
 
   return {
     services,

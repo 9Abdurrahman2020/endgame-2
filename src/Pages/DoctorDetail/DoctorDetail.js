@@ -29,7 +29,7 @@ const DoctorDetail = () => {
           </p>
           <strong>Doctor's Word : {doctor[0]?.des}</strong>
           <br />
-          <Link to={`/appointment/${doctor[0]?.name}`}>
+          <Link to="/appointment">
             <button className="btn btn-success my-3">Get Appointment</button>
           </Link>
         </div>

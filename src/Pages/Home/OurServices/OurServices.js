@@ -47,7 +47,7 @@ const OurServices = () => {
             services.map((s) => {
               const url = `/service/${s.id}`;
               return (
-                <SwiperSlide className="mb-5 card-box">
+                <SwiperSlide key={s.id} className="mb-5 card-box">
                   <Link to={url}>
                     <Card className="card">
                       <Card.Img variant="top" src={s.img} />
