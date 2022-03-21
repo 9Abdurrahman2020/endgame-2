@@ -5,6 +5,7 @@ import Appointment from "./Pages/Appointment/Appointment";
 import AllAppointment from "./Pages/Dashboard/AllAppointment/AllAppointment";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import DashboardRoute from "./Pages/Dashboard/DashboardRoute";
+import ReviewManage from "./Pages/Dashboard/ReviewManage/ReviewManage";
 import SetCoupon from "./Pages/Dashboard/SetCoupon/SetCoupon";
 import DepartmentDetail from "./Pages/DepartmentDetail/DepartmentDetail";
 import DoctorDetail from "./Pages/DoctorDetail/DoctorDetail";
@@ -14,6 +15,7 @@ import MyAppointment from "./Pages/MyAppointment/MyAppointment";
 import Payment from "./Pages/Payment/Payment";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Register from "./Pages/Register/Register";
+import Review from "./Pages/Review/Review";
 import ServiceDetail from "./Pages/ServiceDetail/ServiceDetail";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
@@ -29,6 +31,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/my-appointment" element={<MyAppointment />} />
           <Route path="/payment/:id" element={<Payment />} />
+          <Route path="/review/:id" element={<Review />} />
           <Route
             path="/doctor/:id"
             element={
@@ -71,6 +74,7 @@ function App() {
           >
             <Route path="/dashboard" element={<AllAppointment />} />
             <Route path="/dashboard/coupon" element={<SetCoupon />} />
+            <Route path="/dashboard/reviews" element={<ReviewManage />} />
           </Route>
         </Routes>
         <Footer />

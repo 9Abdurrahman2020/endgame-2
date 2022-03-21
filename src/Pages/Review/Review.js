@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
+import { Container, Form } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 
-const SetCoupon = () => {
+const Review = () => {
+  const { id } = useParams();
   const [formData, setFromData] = useState({});
 
   const handleOnBlur = (e) => {
@@ -13,9 +15,11 @@ const SetCoupon = () => {
   };
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    formData.email = "9abdurrahman2020@gmail.com";
-    fetch("http://localhost:5000/coupon", {
-      method: "PUT",
+    formData.for = id;
+    formData.status = "pending";
+    console.log(formData);
+    fetch("http://localhost:5000/review", {
+      method: "POST",
       headers: {
         "content-type": "application/json",
       },
@@ -24,37 +28,37 @@ const SetCoupon = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          alert("successfully set coupon code and discount !");
+          alert("successfully submitted your review !");
         }
       });
   };
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <Container>
       <form onSubmit={handleOnSubmit}>
-        <Form.Group className="mb-3 w-50" controlId="exampleForm.ControlInput1">
-          <Form.Label>Put coupon Code:</Form.Label>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Your Name:</Form.Label>
           <Form.Control
+            name="name"
             onBlur={handleOnBlur}
-            name="coupon"
             type="text"
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3 w-50" controlId="exampleForm.ControlInput1">
-          <Form.Label>Put coupon percentage:</Form.Label>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Your Comments:</Form.Label>
           <Form.Control
+            name="comments"
             onBlur={handleOnBlur}
-            name="percentage"
-            type="number"
-            required
+            as="textarea"
+            rows={3}
           />
         </Form.Group>
-        <button type="submit" className="btn btn-success">
-          Set
+        <button type="submit" className="btn btn-success text-center">
+          Submit
         </button>
       </form>
-    </div>
+    </Container>
   );
 };
 
-export default SetCoupon;
+export default Review;

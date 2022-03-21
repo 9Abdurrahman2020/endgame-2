@@ -8,7 +8,9 @@ const Payment = () => {
   const [percentage, setPercentage] = useState(0);
   const [applied, setApplied] = useState(false);
   const paymentHandler = () => {
-    alert("Thanks for successfully payment");
+    setTimeout(() => {
+      alert("Thanks for successfully payment");
+    }, 500);
     couponRef.current.value = "";
   };
   useEffect(() => {

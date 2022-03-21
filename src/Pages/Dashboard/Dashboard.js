@@ -29,6 +29,11 @@ function Dashboard() {
                     <span className="logo-style">{}</span>Set Coupon
                   </Link>
                 </Nav.Link>
+                <Nav.Link eventKey="third">
+                  <Link to={`/dashboard/reviews`} className="dashboard-menu">
+                    <span className="logo-style">{}</span>Reviews
+                  </Link>
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Button onClick={logOut} variant="danger" className="m-3">
