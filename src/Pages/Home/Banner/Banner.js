@@ -15,8 +15,8 @@ const Banner = () => {
               from our modern hospital.
             </span>
           </h1>
-          <Link to="/all-doctors">
-            <button className="btn btn-success">Our Doctors</button>
+          <Link to="/">
+            <button className="btn btn-success">Explore</button>
           </Link>
         </div>
       </div>
