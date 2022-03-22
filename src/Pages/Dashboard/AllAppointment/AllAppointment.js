@@ -8,7 +8,7 @@ const AllAppointment = () => {
   const [update, setUpdate] = useState(1);
 
   useEffect(() => {
-    fetch("http://https://afternoon-brook-80659.herokuapp.com/appointment")
+    fetch("https://afternoon-brook-80659.herokuapp.com/appointment")
       .then((res) => res.json())
       .then((result) => {
         setCount(result.length);
@@ -19,7 +19,7 @@ const AllAppointment = () => {
   const removeBookings = (id) => {
     const confirm = window.confirm("Are you sure? Want to cancel?");
     if (confirm) {
-      fetch(`http://https://afternoon-brook-80659.herokuapp.com/delete/${id}`, {
+      fetch(`https://afternoon-brook-80659.herokuapp.com/delete/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -33,7 +33,7 @@ const AllAppointment = () => {
   };
 
   const updateStatus = (id) => {
-    fetch(`http://https://afternoon-brook-80659.herokuapp.com/update/${id}`, {
+    fetch(`https://afternoon-brook-80659.herokuapp.com/update/${id}`, {
       method: "PUT",
     })
       .then((res) => res.json())

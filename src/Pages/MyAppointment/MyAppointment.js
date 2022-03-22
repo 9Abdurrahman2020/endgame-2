@@ -10,7 +10,7 @@ const MyAppointment = () => {
   const [cancel, setCancel] = useState(1);
   useEffect(() => {
     fetch(
-      `http://https://afternoon-brook-80659.herokuapp.com/my-bookings/${user?.email}`
+      `https://afternoon-brook-80659.herokuapp.com/my-bookings/${user?.email}`
     )
       .then((res) => res.json())
       .then((result) => {
@@ -23,7 +23,7 @@ const MyAppointment = () => {
   const removeBookings = (id) => {
     const confirm = window.confirm("Are you sure? Want to cancel?");
     if (confirm) {
-      fetch(`http://https://afternoon-brook-80659.herokuapp.com/delete/${id}`, {
+      fetch(`https://afternoon-brook-80659.herokuapp.com/delete/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

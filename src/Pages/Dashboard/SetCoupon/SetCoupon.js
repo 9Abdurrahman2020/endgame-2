@@ -14,7 +14,7 @@ const SetCoupon = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     formData.email = "9abdurrahman2020@gmail.com";
-    fetch("http://https://afternoon-brook-80659.herokuapp.com/coupon", {
+    fetch("https://afternoon-brook-80659.herokuapp.com/coupon", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

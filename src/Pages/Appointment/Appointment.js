@@ -20,7 +20,7 @@ const Appointment = () => {
     data.status = "pending";
     data.email = user.email;
     console.log(data);
-    fetch("http://https://afternoon-brook-80659.herokuapp.com/appointment", {
+    fetch("https://afternoon-brook-80659.herokuapp.com/appointment", {
       method: "POST",
       headers: {
         "content-type": "application/json",

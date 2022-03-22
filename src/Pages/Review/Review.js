@@ -18,7 +18,7 @@ const Review = () => {
     formData.for = id;
     formData.status = "pending";
     console.log(formData);
-    fetch("http://https://afternoon-brook-80659.herokuapp.com/review", {
+    fetch("https://afternoon-brook-80659.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
