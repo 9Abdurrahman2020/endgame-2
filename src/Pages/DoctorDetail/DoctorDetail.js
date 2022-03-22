@@ -14,7 +14,7 @@ const DoctorDetail = () => {
     setDoctor(thisDoctor);
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/review/${id}`)
+    fetch(`http://https://afternoon-brook-80659.herokuapp.com/review/${id}`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [id]);

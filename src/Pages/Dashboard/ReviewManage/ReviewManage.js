@@ -7,7 +7,7 @@ const ReviewManage = () => {
   const [cancel, setCancel] = useState(1);
   const [update, setUpdate] = useState(1);
   useEffect(() => {
-    fetch(`http://localhost:5000/review`)
+    fetch(`http://https://afternoon-brook-80659.herokuapp.com/review`)
       .then((res) => res.json())
       .then((data) => {
         setCount(data.length);
@@ -17,9 +17,12 @@ const ReviewManage = () => {
   const removeBookings = (id) => {
     const confirm = window.confirm("Are you sure? Want to cancel?");
     if (confirm) {
-      fetch(`http://localhost:5000/review-delete/${id}`, {
-        method: "DELETE",
-      })
+      fetch(
+        `http://https://afternoon-brook-80659.herokuapp.com/review-delete/${id}`,
+        {
+          method: "DELETE",
+        }
+      )
         .then((res) => res.json())
         .then((result) => {
           if (result.acknowledged) {
@@ -31,9 +34,12 @@ const ReviewManage = () => {
   };
 
   const updateStatus = (id) => {
-    fetch(`http://localhost:5000/review-update/${id}`, {
-      method: "PUT",
-    })
+    fetch(
+      `http://https://afternoon-brook-80659.herokuapp.com/review-update/${id}`,
+      {
+        method: "PUT",
+      }
+    )
       .then((res) => res.json())
       .then((result) => {
         if (result.acknowledged) {

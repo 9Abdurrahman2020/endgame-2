@@ -14,7 +14,7 @@ const Payment = () => {
     couponRef.current.value = "";
   };
   useEffect(() => {
-    fetch("http://localhost:5000/coupon")
+    fetch("http://https://afternoon-brook-80659.herokuapp.com/coupon")
       .then((res) => res.json())
       .then((data) => {
         setCoupon(data[0].coupon);

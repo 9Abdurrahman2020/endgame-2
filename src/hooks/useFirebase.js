@@ -26,17 +26,17 @@ const useFirebase = () => {
   const googleProvider = new GoogleAuthProvider();
 
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("http://https://afternoon-brook-80659.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
   useEffect(() => {
-    fetch("http://localhost:5000/doctors")
+    fetch("http://https://afternoon-brook-80659.herokuapp.com/doctors")
       .then((res) => res.json())
       .then((data) => setDoctors(data));
   }, []);
   useEffect(() => {
-    fetch("http://localhost:5000/department")
+    fetch("http://https://afternoon-brook-80659.herokuapp.com/department")
       .then((res) => res.json())
       .then((data) => setDepartment(data));
   }, []);
@@ -53,7 +53,7 @@ const useFirebase = () => {
       createUserWithEmailAndPassword(auth, email, pass)
         .then(() => {
           setError("Successfully registered, You can login now !");
-          fetch("http://localhost:5000/users", {
+          fetch("http://https://afternoon-brook-80659.herokuapp.com/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -91,7 +91,7 @@ const useFirebase = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         setUser(result.user);
-        fetch("http://localhost:5000/users", {
+        fetch("http://https://afternoon-brook-80659.herokuapp.com/users", {
           method: "PUT",
           headers: {
             "content-type": "application/json",
@@ -125,7 +125,9 @@ const useFirebase = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${user?.email}`)
+    fetch(
+      `http://https://afternoon-brook-80659.herokuapp.com/user/${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setUserRole(data.role);
