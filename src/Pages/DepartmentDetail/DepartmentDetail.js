@@ -30,7 +30,7 @@ const DepartmentDetail = () => {
       </div>
       <h2>Other Departments</h2>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={1}
         spaceBetween={20}
         slidesPerGroup={1}
         loop={true}
@@ -40,7 +40,7 @@ const DepartmentDetail = () => {
         }}
         breakpoints={{
           640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 10,
           },
           768: {

@@ -18,7 +18,7 @@ const OurServices = () => {
         <h1>OUR SERVICES</h1>
         <hr style={{ height: "2px" }} className="ourdoctors-horizental-line" />
         <Swiper
-          slidesPerView={2}
+          slidesPerView={1}
           spaceBetween={20}
           slidesPerGroup={1}
           loop={true}
@@ -28,7 +28,7 @@ const OurServices = () => {
           }}
           breakpoints={{
             640: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 10,
             },
             768: {
